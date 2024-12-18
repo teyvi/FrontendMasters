@@ -21,14 +21,10 @@ div {
   height: 70rem;
 }
 
-nav {
-}
-
 nav ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
-
 }
 
 nav li {
@@ -53,10 +49,60 @@ nav li:hover {
 }
 
 .horizontal li {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-    display: inline-block;
-    padding: 0.5rem;
-  }
-  
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+img {
+  border: 10px solid green;
+}
+
+h1 {
+  border: solid yellowgreen;
+}
+
+blockquote {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3rem;
+  font-style: italic;
+  text-align: center;
+}
+
+cite {
+  font-size: 2rem;
+}
+
+.bigbold {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 3rem;
+  color: blue;
+  line-height: 2rem;
+}
+
+ul a:link {
+  font-weight: bold;
+  text-decoration: none;
+  color: pink;
+}
+
+a:visited {
+  color: green;
+  font-weight: normal;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: underline;
+  background-color: black;
+}
+
+a.havard:link {
+  color: maroon;
+}
