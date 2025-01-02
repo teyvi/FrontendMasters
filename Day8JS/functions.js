@@ -27,3 +27,4 @@ console.log(sentence.toLocaleLowerCase())
 
 console.log (Math.min(5.1, 1, 100,0.5));
 console.log (Math.max(5.1, 1, 100,0.5));
+
