@@ -21,3 +21,40 @@ function suggestMusic(person) {
 
 suggestMusic(person1);
 suggestMusic(person2);
+
+
+//adding functions to objects
+const dog = {
+    name: 'doggie',
+    speak (){
+        console.log('woof woof')
+    }
+}
+
+dog.speak();
+
+
+//adding a parameter
+const dogo = {
+    name: 'doggie',
+    speak (somethingHere){
+        console.log('woof woof', somethingHere)
+    }
+}
+dogo.speak('lol');
+
+//objects with objects no limit to nesting objects
+const userLocation ={
+    city:'accra',
+    location :{
+        country: "ghana",
+        region:"Greater Accra",
+        apartment:{
+            roomNumber:"23",
+            level:"2"
+        }
+        
+    }
+}
+console.log("user info",userLocation.location.apartment.roomNumber)
+
