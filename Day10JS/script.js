@@ -58,3 +58,26 @@ const userLocation ={
 }
 console.log("user info",userLocation.location.apartment.roomNumber)
 
+
+//arrays and some array methods
+const courses = [
+    {teacher:'Kyle Simpson', course:"JS function lite"},
+    {teacher:'Zione Sion', course:"SQL LITE"},
+    {teacher:'Jean Simps', course:"HTML and CSS"}, 
+]
+
+//push array method
+courses.push({teacher:'Judge Meadows', course:"The Pact for Dummies"})
+console.log(courses)
+
+
+const noJean = courses.pop()
+console.log('no jean',noJean)
+
+
+const subArray = courses.splice(1,1);
+const courseInsert = courses.splice(1,1, {course:"intro to silo season 1"});
+
+console.log('subarrays',subArray)
+console.log('coursesInsert',courseInsert)
+console.log(courses)
