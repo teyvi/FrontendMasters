@@ -81,3 +81,6 @@ const courseInsert = courses.splice(1,1, {course:"intro to silo season 1"});
 console.log('subarrays',subArray)
 console.log('coursesInsert',courseInsert)
 console.log(courses)
+
+
+//looping over arrays
