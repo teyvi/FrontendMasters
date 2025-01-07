@@ -120,3 +120,20 @@ function sumNumbers(start, end) {
     return total;
 }
 console.log(sumNumbers(4, 330));  // Outputs 80499
+
+//check if number is positive or negative
+function checkPositiveNegative(number) {
+    if (typeof number !== 'number' || isNaN(number)) {
+        return 'invalid'
+    }
+
+if (number < 0 ){
+    return 'its negative'
+}
+else if (number > 0){
+    console.log('its positive')
+}
+else {
+    console.log('that is zero')
+}}
+checkPositiveNegative(0)
