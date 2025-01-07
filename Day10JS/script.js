@@ -84,3 +84,7 @@ console.log(courses)
 
 
 //looping over arrays
+
+for (i=0; i >= 200 ; i++){
+    i++
+}

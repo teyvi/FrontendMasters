@@ -97,3 +97,26 @@ for (let i = 0; i < timesToRepeat; i++)
     myString = myString +  character;
 }
 console.log("times to repeat", myString)
+
+let total = 0;
+for (let i = 0; i <= 200; i++)
+{
+    total ++
+}
+console.log('total', total)
+
+function countNumbers (start, end){
+const count = start + end;
+const middle = end/2;
+total = count * middle;
+return total;
+}
+console.log(countNumbers(4,330));
+
+//correct way of calculating this
+function sumNumbers(start, end) {
+    const count = (end - start) + 1;  // Number of terms
+    const total = (count / 2) * (start + end);  // Sum formula
+    return total;
+}
+console.log(sumNumbers(4, 330));  // Outputs 80499
