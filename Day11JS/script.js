@@ -45,3 +45,20 @@ console.log(primeNumbers.sort(function (num1, num2) {
 
 //using the sort function on strings
 console.log(cities.sort())
+
+//more on if blocks and logic
+const x = 5 ;
+const y = 10;
+const isTrue=true;
+
+if (x !== y){
+    console.log('those are not equal')
+}
+
+if ((x ===y && y ===z)  && isTrue) {
+    console.log('these are all equal')
+}
+
+if (isTrue || (x === z && x === y)){
+    console.log('this is and or statement')
+}
