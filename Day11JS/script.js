@@ -50,14 +50,15 @@ console.log(cities.sort())
 const x = 5 ;
 const y = 10;
 const isTrue=true;
+
 if (x !== y){
     console.log('those are not equal')
 }
 
-if (x ===y && y ===z  && isTrue) {
+if ((x ===y && y ===z)  && isTrue) {
     console.log('these are all equal')
 }
 
-if (isTrue || x === z){
+if (isTrue || (x === z && x === y)){
     console.log('this is and or statement')
 }
