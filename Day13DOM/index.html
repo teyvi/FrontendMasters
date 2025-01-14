@@ -17,6 +17,7 @@
             width: 50px;
             height: 100px;
             background-color: blue;
+            margin:6rem
         }
      
     </style>
@@ -25,7 +26,20 @@
     <div class="blueSquare"></div>
     <div class="blueSquare"></div>
 
+    <ul>
+        <li class="js-target"> Change it will</li>
+        <li>not targetedfn</li>
+        <li class="js-target">Will be modified</li>
+        <li class="js-target">Will definitely Change</li>
+        <li> not targeted</li>
+    </ul>
+
     <script>
+        const changeList = document.querySelectorAll('.js-target');
+        for (let i = 0; i < changeList.length; i++){
+            const currentElement = changeList[i];
+            currentElement.textContent = "I have the power to change li tags hahaha --- evil laugh";
+        }
         const redSquare = document.querySelector('.redSquare');
         redSquare.style.backgroundColor = 'pink';
 
