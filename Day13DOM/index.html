@@ -12,11 +12,26 @@
             height: 100px;
             background-color: red;
         }
+
+        .blueSquare {
+            width: 50px;
+            height: 100px;
+            background-color: blue;
+        }
+     
     </style>
     <div class="redSquare"></div>
+    <div class="blueSquare"></div>
+    <div class="blueSquare"></div>
+    <div class="blueSquare"></div>
+
     <script>
         const redSquare = document.querySelector('.redSquare');
-        redSquare.style.backgroundColor = 'blue';
+        redSquare.style.backgroundColor = 'pink';
+
+        //using query selector all
+        const blueSquares = document.querySelectorAll('.blueSquare');
+        blueSquares.forEach(blues => {blues.style.backgroundColor ="peru"});
     </script>
 </body>
 </html>
