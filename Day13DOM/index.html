@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <style>
+        .redSquare {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        .blueSquare {
+            width: 50px;
+            height: 100px;
+            background-color: blue;
+            margin:6rem
+        }
+     
+    </style>
+    <div class="redSquare"></div>
+    <div class="blueSquare"></div>
+    <div class="blueSquare"></div>
+    <div class="blueSquare"></div>
+
+    <ul>
+        <li class="js-target"> Change it will</li>
+        <li>not targetedfn</li>
+        <li class="js-target">Will be modified</li>
+        <li class="js-target">Will definitely Change</li>
+        <li> not targeted</li>
+    </ul>
+
+    <script>
+        const changeList = document.querySelectorAll('.js-target');
+        for (let i = 0; i < changeList.length; i++){
+            const currentElement = changeList[i];
+            currentElement.textContent = "I have the power to change li tags hahaha --- evil laugh";
+        }
+        const redSquare = document.querySelector('.redSquare');
+        redSquare.style.backgroundColor = 'pink';
+
+        //using query selector all
+        const blueSquares = document.querySelectorAll('.blueSquare');
+        blueSquares.forEach(blues => {blues.style.backgroundColor ="peru", blues.style.border = "2px solid pink"});
+    </script>
+</body>
+</html>
