@@ -17,6 +17,7 @@ function buttonClick(value) {
   } else {
     handleNumber(value);
   }
+  screen.innerText = buffer;
 }
 
 //function to hadle symbols
@@ -34,7 +35,6 @@ function handleNumber(numberString) {
   } else {
     buffer += numberString;
   }
-  screen.innerText = buffer;
 }
 //this function get to called once the page is loaded
 function init() {
