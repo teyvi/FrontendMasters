@@ -31,7 +31,13 @@ function handleSymbol(symbol) {
         if(previousOperator === null){
             return;
         }
-    case "&plus":
+        flushOperation(parseInt(buffer))
+        previousOperator = null;
+        buffer = runningTotal;
+        runningTotal = 0;
+        break;
+
+        case "&plus":
     case "&minus":
     case "&times":
     case "&divide":
@@ -55,7 +61,7 @@ function handleMath(symbol) {
 }
 
 //function to flush the operation
-function flushOperator(intBuffer) {
+function flushOperation(intBuffer) {
   if (previousOperator === "+") {
     runningTotal += intBuffer;
   } else if (previousOperator === "-") {
