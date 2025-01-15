@@ -5,7 +5,7 @@ let runningTotal = 0;
 let buffer = "0";
 
 //hold previous operator
-let previousOperator;
+let previousOperator = null;
 
 const screen = document.querySelector(".screen");
 
@@ -27,7 +27,10 @@ function handleSymbol(symbol) {
       buffer = "0";
       runningTotal = 0;
       break;
-    case "=":
+    case "&equals":
+        if(previousOperator === null){
+            return;
+        }
     case "&plus":
     case "&minus":
     case "&times":
@@ -36,7 +39,6 @@ function handleSymbol(symbol) {
       break;
   }
 }
-
 //function to bookkeep the math operation
 function handleMath(symbol) {
   if (buffer === "0") {
@@ -54,11 +56,11 @@ function handleMath(symbol) {
 
 //function to flush the operation
 function flushOperator(intBuffer) {
-  if (previousOperator === "&plus") {
+  if (previousOperator === "+") {
     runningTotal += intBuffer;
-  } else if (previousOperator === "&minus") {
+  } else if (previousOperator === "-") {
     runningTotal -= intBuffer;
-  } else if (previousOperator === "&divide") {
+  } else if (previousOperator === "÷") {
     runningTotal /= intBuffer;
   } else {runningTotal *= intBuffer;
   }
