@@ -20,12 +20,20 @@ function buttonClick(value) {
   screen.innerText = buffer;
 }
 
-//function to hadle symbols
+//function to hadle symbols using switch instead of if statement for each symbol
 function handleSymbol(symbol) {
-    if (symbol === 'C'){
-        buffer = '0';
-        runningTotal = 0;
+ 
+    switch (value){
+        case 'C':
+            buffer = '0';
+            runningTotal = 0;
+            break;
+        case '=':
+            handleMath(symbol);
+            break;
     }
+
+
 }
 
 //function to handle numbers concatenate as string
