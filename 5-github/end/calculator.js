@@ -27,8 +27,9 @@ function handleNumber(numberString){
     if (buffer === '0'){
         buffer = numberString;
     } else{
-        buffer = buffer + numberString;
+        buffer += numberString;
     }
+    screen.innerText = buffer;
 }
 //this function get to called once the page is loaded
 function init (){
