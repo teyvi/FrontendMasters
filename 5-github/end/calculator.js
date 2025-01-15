@@ -29,6 +29,10 @@ function handleSymbol(symbol) {
             runningTotal = 0;
             break;
         case '=':
+        case '&plus':
+        case '&minus':
+        case '&times':
+        case '&divide':
             handleMath(symbol);
             break;
     }
