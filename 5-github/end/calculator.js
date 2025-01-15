@@ -11,10 +11,14 @@ const screen = document.querySelector('.screen');
 
 //function for the click of buttons
 
-function buttonClick() {}
+function buttonClick(value) {}
 
+//this function get to called once the page is loaded
 function init (){
-    
+    document.querySelector('.calc-buttons')
+    .addEventListerner('click', function(event){
+        buttonClick(event.target.innerText);
+    })
 }
 
 
