@@ -22,22 +22,33 @@ function buttonClick(value) {
 
 //function to hadle symbols using switch instead of if statement for each symbol
 function handleSymbol(symbol) {
- 
-    switch (value){
-        case 'C':
-            buffer = '0';
-            runningTotal = 0;
-            break;
-        case '=':
-        case '&plus':
-        case '&minus':
-        case '&times':
-        case '&divide':
-            handleMath(symbol);
-            break;
+  switch (value) {
+    case "C":
+      buffer = "0";
+      runningTotal = 0;
+      break;
+    case "=":
+    case "&plus":
+    case "&minus":
+    case "&times":
+    case "&divide":
+      handleMath(symbol);
+      break;
+  }
+}
+
+function handleMath(symbol){
+    if (buffer === '0'){
+        return
     }
-
-
+        const intBuffer = parseInt(buffer);
+    if (runningTotal === 0){
+        runningTotal = intBuffer;
+    } else{
+        flushOperation(intBuffer);
+    }
+    previousOperator = symbol;
+    buffer = '0';
 }
 
 //function to handle numbers concatenate as string
