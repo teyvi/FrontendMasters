@@ -22,25 +22,25 @@ function buttonClick(value) {
 
 //function to hadle symbols using switch instead of if statement for each symbol
 function handleSymbol(symbol) {
-  switch (value) {
+  switch (symbol) {
     case "C":
       buffer = "0";
       runningTotal = 0;
       break;
-    case "&equals":
-        if(previousOperator === null){
-            return;
-        }
-        flushOperation(parseInt(buffer))
-        previousOperator = null;
-        buffer = runningTotal;
-        runningTotal = 0;
-        break;
+    case "=":
+      if (previousOperator === null) {
+        return;
+      }
+      flushOperation(parseInt(buffer));
+      previousOperator = null;
+      buffer = runningTotal;
+      runningTotal = 0;
+      break;
 
-        case "&plus":
-    case "&minus":
-    case "&times":
-    case "&divide":
+    case "+":
+    case "-":
+    case "×":
+    case "÷":
       handleMath(symbol);
       break;
   }
@@ -68,7 +68,8 @@ function flushOperation(intBuffer) {
     runningTotal -= intBuffer;
   } else if (previousOperator === "÷") {
     runningTotal /= intBuffer;
-  } else {runningTotal *= intBuffer;
+  } else {
+    runningTotal *= intBuffer;
   }
 }
 
