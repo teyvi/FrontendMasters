@@ -37,18 +37,31 @@ function handleSymbol(symbol) {
   }
 }
 
-function handleMath(symbol){
-    if (buffer === '0'){
-        return
-    }
-        const intBuffer = parseInt(buffer);
-    if (runningTotal === 0){
-        runningTotal = intBuffer;
-    } else{
-        flushOperation(intBuffer);
-    }
-    previousOperator = symbol;
-    buffer = '0';
+//function to bookkeep the math operation
+function handleMath(symbol) {
+  if (buffer === "0") {
+    return;
+  }
+  const intBuffer = parseInt(buffer);
+  if (runningTotal === 0) {
+    runningTotal = intBuffer;
+  } else {
+    flushOperation(intBuffer);
+  }
+  previousOperator = symbol;
+  buffer = "0";
+}
+
+//function to flush the operation
+function flushOperator(intBuffer) {
+  if (previousOperator === "&plus") {
+    runningTotal += intBuffer;
+  } else if (previousOperator === "&minus") {
+    runningTotal -= intBuffer;
+  } else if (previousOperator === "&divide") {
+    runningTotal /= intBuffer;
+  } else {runningTotal *= intBuffer;
+  }
 }
 
 //function to handle numbers concatenate as string
